@@ -17,7 +17,7 @@ fetchMovie()
 function fetchMovie() {
     
     var ingredient= "Gin"
-    fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=85bb4e2df2ca0ae4497039fe74f9a9ba&language=en")
+    fetch("https://api.themoviedb.org/3/discover/movie?api_key=85bb4e2df2ca0ae4497039fe74f9a9ba&with_genres=28&page_1&sort_by=popularity.desc")
 
         .then(function (response) {
             return response.json();
