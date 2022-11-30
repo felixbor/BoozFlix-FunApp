@@ -1,4 +1,4 @@
-var ingredientId = document.querySelector('#igredient_id')
+
 
 
 fetchDrink()
