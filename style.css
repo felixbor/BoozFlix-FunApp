@@ -48,6 +48,9 @@ header {
   animation-duration: 1.5s;
 }
 
+.custom{
+margin-left: 50px;
+}
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
