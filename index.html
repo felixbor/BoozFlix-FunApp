@@ -8,31 +8,39 @@
     <link rel ="stylesheet" href = "style.css"/>
     <title>BoozFlix</title>
 </head>
+
 <body>
-<header>
+ <header>
+     <!--Header-->
     <div class="navbar-end">
         <a class="navbar-item">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Bulma">
-          </a>
-      </div>
-  <p class="title is-3 ">Welcome to BoozFlix</p>
-  <p class="subtitle is-5">Encyclopaedia to Good Mood</p>
+            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Bulma"></a>
+    </div>
+       <p class="title is-3 has-text-light ">Welcome to BoozFlix</p>
+       <p class="subtitle is-5 has-text-white-ter">Encyclopaedia to Good Mood</p>
 </header>
 
-<div class="tile is-ancestor">
+   <!--Title-->
+    <div class="tile is-ancestor">
     <div class="tile is-parent">
-      <article class="tile is-child box">
-        <p class="title">Drinks by Ingredient</p>
-        <p class="subtitle">Ever wonder what kind of boozy goodies you stock your home bar with? Well of course it depends on what kind of drinks you like to make, homeboy! For our friends and fans down to clown with simple drink recipes, you probably want to stock up on your favorite liquor and mixers like club soda or fruit juice. But if you’re practicing to be a bartender, you definitely want a fully stocked bar with all sorts of liqueurs like blue curacao and Baileys Irish cream. Like we said, it really all depends on what kind of mixed drinks or cocktail recipes you like to whip up. So whether you’re a vodka and orange juice type of person or strive to be a master mixologist, BoozFlix has fun and fire af drink recipes by ingredient that anyone can follow.  </p>
-      </article>
+      <article class="tile is-child box has-background-black">
+      <p class="title has-text-light">Make your choice of drinks and movies</p>
+      <div class="content has-text-white-ter">
+        <p>Ever wonder what kind of boozy goodies you stock your home bar with? Well of course it depends on what kind of drinks you like to make, homeboy! For our friends and fans down to clown with simple drink recipes, you probably want to stock up on your favorite liquor and mixers like club soda or fruit juice. BoozFlix has fun and fire af drink recipes by ingredient that anyone can follow.  BoozFliz movie recommendation engine is the answer to the question “What movie should I watch?”! Your film choices are about to be simplified greatly.</p>
+      </div>
+      </article> 
     </div>
-    <div class="tile is-parent">
-      <article class="tile is-child box">
-        <p class="title">Search Bar</p>
-        <p class="subtitle">Bar</p>
-        <!-- <input id="ingredient" type="text" autofocus="true" class="form-input"/>
-        <button class="btn btn-primary" type="submit">Search</button>
-         -->
+    </div>
+
+    <!--Drinks selection section-->
+     <div class="tile is-ancestor ">
+     <div class="tile is-vertical is-8">
+      <div class="tile">
+        <div class="tile is-parent is-vertical">
+         <article class="tile is-child box has-background-warning">
+            <p class="title">Enjoy your day</p>
+            <p class="subtitle">With the selection of our drinks</p>
+            <p class ="subtitle">Bar</p>
          <form id = "igredientId" class = "ingredients">  
           <label> Select Ingrediens </label>  
           <select>  
@@ -41,125 +49,52 @@
           <option value = "Whisky"> Whisky </option>  
           <option value = "Cognac"> Cognac </option>  
           </select>  
+          <button class="btn btn-primary" type="submit">Search</button>
           </form>  
-          </div>
+       </article>
+     
+       <!--Drinks slides container-->
+       <div class="drinksContainer">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="assets/image_drink1.jpg" style="width:100%">
+       </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="assets/imege_drink2.jpg" style="width:100%">
         </div>
-            
-          </div>
-      </article>
-    </div>
-    <!-- <div class="tile is-parent">
-      <article class="tile is-child box">
-        <p class="title">Third column</p>
-        <p class="subtitle">With some content</p>
-        <div class="content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="assets/image_drink3.jpg" style="width:100%">
+       </div>
+      
+         <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="assets/image_drink4.jpg" style="width:100%">
+       </div>
         </div>
-      </article> -->
-    </div>
-  </div>
-  
-   <div class="tile is-ancestor">
-     <div class="tile is-vertical is-8">
-      <div class="tile">
-        <div class="tile is-parent is-vertical">
-          <!-- <article class="tile is-child box">
-            <p class="title">Categories</p>
-            <p class="subtitle">Bar</p>
-          </article> -->
-          <article class="tile is-child box">
-            <p class="title">Enjoy your day</p>
-            <p class="subtitle">With the selection of our drinks</p>
-            <figure class="image is-4by3">
-                <img src="assets/fancy_drinks.jpeg">
-              </figure>
-          </article>
-        </div> 
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-            <p class="title">Enjoy your day</p>
-            <p class="subtitle">With the selection of movies</p>
-            <figure class="image is-4by3">
-                <img src="assets/movie_image.jpg">
-              </figure>
-            
-          </article>
+        <br>
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
         </div>
+      </div> 
+    </article>
       </div>
-      <div class="tile is-parent">
-        <article class="tile is-child box">
-          <p class="title">Wide column</p>
-          <p class="subtitle">Aligned with the right column</p>
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-          </div> 
-        </article>
-      </div>
-    </div>
-    <div class="tile is-parent">
-      <article class="tile is-child box">
-        <div class="content">
-          <p class="title">Movies by genre</p>
-          <p class="subtitle">With even more content</p>
-          <div class="content">
-            <p>Watching movies is fun, but figuring out what movie to watch next is a nerve-racking experience. Endlessly scrolling through Netflix, watching trailers on YouTube, looking up IMDb ratings, wasting half an hour and still cannot decide what to watch – does this seem familiar to you?
-            Then you have landed on the right page! BoozFliz movie recommendation engine is the answer to the question “What movie should I watch?”! Your film choices are about to be simplified greatly.</p>
-            <p class="title">Search Bar</p>
-            <p class="subtitle">Bar</p>
-            <form id = "genreId" class = "genres">  
-              <label> Genre </label>  
-              <select>  
-              <option value = "Action"> Action </option>  
-              <option value = "Adventure"> Adventure </option>  
-              <option value = "Animation"> Animation </option>  
-              <option value = "Comedy"> Comedy </option>  
-              <option value = "Crime"> Crime </option>  
-              <option value = "Documentary"> Documentary </option>  
-              <option value = "Drama"> Drama </option>  
-              <option value = "Family"> Family </option>  
-              <option value = "Fantasy"> Fantasy </option>  
-              <option value = "History"> History </option>  
-              <option value = "Horror"> Horrow </option>  
-              <option value = "Music"> Music </option>  
-              <option value = "Mystery"> Mystery</option>  
-              <option value = "Romance"> Romance </option>  
-              <option value = "Tv"> Tv </option>  
-              <option value = "Thriller"> Thriller </option>  
-              <option value = "War"> War </option>  
-              <option value = "Western"> Western </option>  
+      <!--Section for receipe and picture of drinks-->
+    <section class="section has-background-warning">
+      <h1 class="title">Section</h1>
+      <h2 class="subtitle">
+        Section for receipe and picture of drinks
+      </h2>
+    </section>
+ 
+</body>
+ 
 
-              
-              
-
-
-              </select>  
-              </form>  
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-  
-  <div class="tile is-ancestor">
-    <div class="tile is-parent">
-      <article class="tile is-child box">
-        <p class="title">Side column</p>
-        <p class="subtitle">With some content</p>
-        <div class="content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-        </div>
-      </article>
-    </div>
-    <div class="tile is-parent is-8">
-      <article class="tile is-child box">
-        <p class="title">Main column</p>
-        <p class="subtitle">With some content</p>
-        <div class="content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-
+      
   <script src="./script.js"></script>
 </html>
