@@ -1,4 +1,96 @@
-let codes = {
+
+var ingredient = ""
+$(".search").on("click", function (event) {
+    event.preventDefault()
+    var ingredient = $(".selectDrink").val()
+    console.log(ingredient)
+    $(".result").empty();
+
+    fetchDrink()
+
+
+
+    function fetchDrink() {
+
+        console.log(ingredient)
+        fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`)
+
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+                displayDrinks(data.drinks)
+            })
+    }
+})
+
+function displayDrinks(data) {
+    if (data.length >10){
+        data.length=10
+    }
+    for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        $(".result").append(`<button>${element.strDrink}</button>`);
+        
+    }
+   
+
+  
+    
+}
+$(".result").on("click", selectDrink)
+function selectDrink(event) {
+    var name = event.target.textContent
+    fetchRecipe(name)
+    $(".ingrMes").empty();
+    $(".ingr").empty();
+    $(".measure").empty();
+
+
+}
+
+function fetchRecipe(name) {
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`)
+   
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            displayRecipe(data)
+        })
+
+}
+function displayRecipe(data) {
+   
+    var recipe = data.drinks[0].strInstructions
+    var DrinkImage = data.drinks[0].strDrinkThumb
+    for (const [key, value] of Object.entries(data.drinks[0])) {
+      if(key.includes('strIngredient')){
+        if (value!=null){$(".ingr").append(`<p>${value}</p>`)
+    }
+         console.log(value)
+ }
+    }
+    for (const [key, value] of Object.entries(data.drinks[0])) {
+       
+
+        if(key.includes('strMeasure')){
+            
+          if (value!=null){$(".measure").append(`<p>${value}</p>`)
+      }
+           console.log(value)
+   }
+      }
+
+    console.log(DrinkImage)
+   var picture ="https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg"
+    $(".ingrMes").append(`<p>${recipe}</p>`+`<img src=${DrinkImage}>`);
+ 
+    }    
+
+/*let codes = {
     "action": 28,
     "adventure": 12,
     "animation": 16,
@@ -20,19 +112,7 @@ let codes = {
     "western": 37
 };
 
-fetchDrink()
-function fetchDrink() {
 
-    var ingredient = "Gin"
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`)
-
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-        })
-}
 
 
 fetchMovie()
@@ -69,3 +149,4 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+*/
