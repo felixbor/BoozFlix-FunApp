@@ -6,7 +6,9 @@ $(".search").on("click", function (event) {
   var ingredient = $(".selectDrink").val();
   console.log(ingredient);
   $(".result").empty();
-
+  $(".ingrMes").empty();
+  $(".ingr").empty();
+  $(".measure").empty();
   fetchDrink();
 
   function fetchDrink() {
