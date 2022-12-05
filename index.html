@@ -8,15 +8,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <title> Prpoject one  BoozFlix</title>
+  <title> Project one  BoozFlix</title>
 </head>
 
 <body>
   <header>
     <!--Header-->
     <div class="navbar-end">
-      <a class="navbar-item">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Bulma"></a>
+      <a class="navbar-item"><img></a>
     </div>
     <p class="title is-3 has-text-light ">Welcome to BoozFlix</p>
     <p class="subtitle is-5 has-text-white-ter">Encyclopaedia to Good Mood</p>
@@ -39,47 +38,45 @@
     </div>
   </div>
 
-<!--Movies selection section-->
-<div class="tile is-ancestor ">
-  <div class="tile is-vertical is-6 ">
-    <div class="tile customblock">
-      <div class="tile is-parent is-vertical custom">
-        <article class="tile is-child box has-background-warning ">
+  <!--Movies selection section-->
+  <div class="tile is-ancestor ">
+    <div class="tile is-vertical is-6 ">
+      <div class="tile customblock">
+        <div class="tile is-parent is-vertical custom">
+          <article class="tile is-child box has-background-warning ">
 
 
-          <p class="title">Movies</p>
-          <p class="subtitle">Find a great movie to watch depending on what genre you feel like viewing!</p>
+            <p class="title">Movies</p>
+            <p class="subtitle">Find a great movie to watch depending on what genre you feel like viewing!</p>
 
 
-          <section id="movieContainer">
-            <div>
-              <label for="findMovie">Search a movie for Suggestions</label>
-              <form id="movieSearch" class="block">
-                <input type="text" name="findMovie" id="movieInput" placeholder="Type a movie push enter!">
-              </form>
-            </div>
+            <section id="movieContainer">
+              <div>
+                <label for="findMovie">Search a movie for Suggestions</label>
+                <form id="movieSearch" class="block">
+                  <input type="text" name="findMovie" id="movieInput" placeholder="Type a movie push enter!">
+                </form>
+              </div>
 
-            <div id="movieSuggestionsView">
+              <div id="movieSuggestionsView">
 
-              <div id="titlePoster">
-                <h4></h4>
-                <img>
-            </div>
-    
-            <div id="movieInfo">
-                <h5>Synposis</h5>
-                <p></p>
-            </div>
+                <div id="titlePoster">
+                  <h4></h4>
+                  <img>
+              </div>
+      
+              <div id="movieInfo">
+                  <h5>Synposis</h5>
+                  <p></p>
+              </div>
 
-            </div>
+              </div>
 
-          </section>
-        </article>
+            </section>
+          </article>
 
           <!--Drinks slides container-->
           <div class="drinksContainer">
-
-
             <div class="mySlides fade">
               <div class="numbertext">5 / 5</div>
               <img src="assets/movie_image.jpg" style="width:75%">
@@ -97,12 +94,7 @@
         </article>
 
         <!--Section for receipe and picture of drinks-->
-        <div class="section has-background-warning custom">
-          <h1 class="title">Section</h1>
-          <h2 class="subtitle">
-            Section for receipe and picture of drinks
-          </h2>
-        </div>
+        
       </div>
     </div>
     <div class="tile is-vertical is-6 ">
@@ -120,20 +112,31 @@
                 <option value="Tequila">Tequila</option>
                 <option value="Cognac"> Soda</option>
               </select>
-              <button class=" search btn btn-primary" type="submit">Search</button>
+              <button class=" search btn btn-primary" id="drinkSearch" type="submit">Search</button>
             </form>
+            <!--Drinks slides container-->
+          <div class="drinksContainer">
+            <div>
+              
+              <p>Section for receipe and picture of drinks</p>
+
+              <div class="ingrMes"></div>
+              <div class="recipe">
+                <div class="ingr"></div>
+                <div class="measure"></div>
+              </div>
+              <div class="result"></div>
+      
+            </div>
           </article>
 
-          <!--Drinks slides container-->
           <div class="drinksContainer">
-
-
-
-
-
-
-
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 5</div>
+              <img src="assets/movie_image.jpg" style="width:75%">
+            </div>
           </div>
+
           <br>
           <div style="text-align:center">
             <span class="dot"></span>
@@ -146,16 +149,7 @@
       </article>
 
 
-      <div class="  section has-background-warning custom">Section for receipe and picture of drinks
-
-        <div class="ingrMes"></div>
-        <div class="recipe">
-          <div class="ingr"></div>
-          <div class="measure"></div>
-        </div>
-        <div class="result"></div>
-
-      </div>
+      
     </div>
   </div>
   </div>
