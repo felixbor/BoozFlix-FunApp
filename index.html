@@ -39,32 +39,42 @@
     </div>
   </div>
 
-  <!--Drinks selection section-->
-  <div class="tile is-ancestor ">
-    <div class="tile is-vertical is-6 ">
-      <div class="tile customblock">
-        <div class="tile is-parent is-vertical custom">
-          <article class="tile is-child box has-background-warning ">
-            <p class="title">Movies</p>
-            <p class="subtitle">With the selection of our drinks</p>
-            <p class="subtitle">Bar</p>
-            <form id="igredientId" class="ingredients">
-              <label> Select Ingrediens </label>
-              <label> Select Ingrediens </label>
-              <label> Select Ingrediens </label>
-              <select id="selectD">
-                <option value="GIN"> Action </option>
-                <option value="VODKA"> Drama </option>
-                <option value="Whisky"> Thriller </option>
-                <option value="Cognac"> Comedy </option>
-              </select>
-              </select>
-              </select>
-              <button class="search btn btn-primary" type="submit">Search</button>
-            </form>
-            </form>
-            </form>
-          </article>
+<!--Movies selection section-->
+<div class="tile is-ancestor ">
+  <div class="tile is-vertical is-6 ">
+    <div class="tile customblock">
+      <div class="tile is-parent is-vertical custom">
+        <article class="tile is-child box has-background-warning ">
+
+
+          <p class="title">Movies</p>
+          <p class="subtitle">Find a great movie to watch depending on what genre you feel like viewing!</p>
+
+
+          <section id="movieContainer">
+            <div>
+              <label for="findMovie">Search a movie for Suggestions</label>
+              <form id="movieSearch" class="block">
+                <input type="text" name="findMovie" id="movieInput" placeholder="Type a movie push enter!">
+              </form>
+            </div>
+
+            <div id="movieSuggestionsView">
+
+              <div id="titlePoster">
+                <h4></h4>
+                <img>
+            </div>
+    
+            <div id="movieInfo">
+                <h5>Synposis</h5>
+                <p></p>
+            </div>
+
+            </div>
+
+          </section>
+        </article>
 
           <!--Drinks slides container-->
           <div class="drinksContainer">

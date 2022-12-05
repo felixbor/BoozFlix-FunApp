@@ -90,63 +90,64 @@ function displayRecipe(data) {
  
     }    
 
-/*let codes = {
-    "action": 28,
-    "adventure": 12,
-    "animation": 16,
-    "comedy": 35,
-    "crime": 80,
-    "documentary": 99,
-    "drama": 18,
-    "family": 10751,
-    "fantasy": 14,
-    "history": 36,
-    "horror": 27,
-    "music": 10402,
-    "mystery": 9648,
-    "romance": 10749,
-    "science": 878,
-    "tv": 10770,
-    "thriller": 53,
-    "war": 10752,
-    "western": 37
-};
+//Movies Section
 
+var movieAPI =
+  "https://api.themoviedb.org/3/discover/movie?api_key=85bb4e2df2ca0ae4497039fe74f9a9ba&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
+var posterPic = "https://image.tmdb.org/t/p/w500/";
+var movieSuggestionsView = document.getElementById("movieSuggestionsView");
 
+getSuggestions(movieAPI);
 
+function getSuggestions(url) {
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data.results);
 
-fetchMovie()
-function fetchMovie() {
-    
-    var ingredient= "Gin"
-    fetch("https://api.themoviedb.org/3/discover/movie?api_key=85bb4e2df2ca0ae4497039fe74f9a9ba&with_genres=28&page_1&sort_by=popularity.desc")
+      showSuggestions(data.results);
+    });
+}
 
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-        })
+function showSuggestions(data) {
+  movieSuggestionsView.innerHTML = "";
+  data.forEach((movie) => {
+    var movieInformation = document.createElement("div");
+    var { title, poster_path, overview } = movie;
+    movieInformation.classList.add("movieSuggestionsView");
+    movieInformation.innerHTML = `
+        <div id="titlePoster">
+            <h4>${title}</h4>
+            <img src="${posterPic + poster_path}" alt="${title}">
+        </div>
+
+        <div id="movieInfo">
+            <h5>Synposis</h5>
+            <p>${overview}</p>
+        </div>
+        `;
+    movieSuggestionsView.appendChild(movieInformation);
+  });
 }
 
 //Image slide show
-let slideIndex = 0;
-showSlides();
+// let slideIndex = 0;
+// showSlides();
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-*/
+// function showSlides() {
+//   let i;
+//   let slides = document.getElementsByClassName("mySlides");
+//   let dots = document.getElementsByClassName("dot");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";  
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}    
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " active";
+//   setTimeout(showSlides, 2000); // Change image every 2 seconds
+// }
+// */

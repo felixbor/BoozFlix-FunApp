@@ -84,3 +84,7 @@ flex-direction: column;
   display: flex;
   flex-direction: row;
  }
+
+ #movieSuggestionsView img {
+  max-width: 50%;
+}
