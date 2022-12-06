@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Project one BoozFlix</title>
+  </head>
+</html>
+  <body class="has-background-black">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <title> Project one  BoozFlix</title>
-</head>
-
-<body>
-  <header>
-    <!--Header-->
     <div class="hamburger-menu">
       <input id="menu__toggle" type="checkbox" />
       <label class="menu__btn" for="menu__toggle">
@@ -27,158 +28,102 @@
         <li><a class="menu__item" href="#footer_Container">Contact</a></li>
       </ul>
     </div>
-    <p class="title is-3 has-text-light ">Welcome to BoozFlix</p>
-    <p class="subtitle is-5 has-text-white-ter">Encyclopaedia to Good Mood</p>
-  </header>
+    
+    <header
+      class="column is-full block has-text-warning-light has-text-centered">
+      <h1 class="is-size-1">BoozFlix</h1>
+      <h3 class="is-size-3">Get a drink, watch a flick!</h3>
+      
+      <p>Ever wonder what kind of boozy goodies you stock your home bar with? Well of course it depends on what kind of drinks you like to make, homeboy! For our friends and fans down to clown with simple drink recipes, you probably want to stock up on your favorite liquor and mixers like club soda or fruit juice. BoozFlix has fun and fire af drink recipes by ingredient that anyone can follow. BoozFliz movie recommendation engine is the answer to the question “What movie should I watch?”! Your film choices are about to be simplified greatly.</p>
+    </header>
 
-  <!--Title-->
-  <div class="tile is-ancestor">
-    <div class="tile is-parent">
-      <article class="tile is-child box has-background-black">
-        <p class="title has-text-light">Make your choice of drinks and movies</p>
-        <div class="content has-text-white-ter">
-          <p>Ever wonder what kind of boozy goodies you stock your home bar with? Well of course it depends on what kind
-            of drinks you like to make, homeboy! For our friends and fans down to clown with simple drink recipes, you
-            probably want to stock up on your favorite liquor and mixers like club soda or fruit juice. BoozFlix has fun
-            and fire af drink recipes by ingredient that anyone can follow. BoozFliz movie recommendation engine is the
-            answer to the question “What movie should I watch?”! Your film choices are about to be simplified greatly.
+    <div class="columns">
+      <section
+        class="movieSelection box has-background-warning column is-two-fifths is-variable m-auto"
+      >
+        <div>
+          <h3
+            class="is-size-3 has-text-centered box has-background-black has-text-warning-light"
+          >
+            Movie
+          </h3>
+          <p>
+            Search for your favourite movie and we'll find you something similar!
           </p>
         </div>
-      </article>
-    </div>
-  </div>
 
-  <!--Movies selection section-->
-  <div class="tile is-ancestor ">
-    <div class="tile is-vertical is-6 ">
-      <div class="tile customblock">
-        <div class="tile is-parent is-vertical custom">
-          <article class="tile is-child box has-background-warning ">
-
-
-            <p class="title">Movies</p>
-            <p class="subtitle">Find a great movie to watch depending on what genre you feel like viewing!</p>
-
-
-            <section id="movieContainer">
-              <div>
-                <label for="findMovie">Search a movie for Suggestions</label>
-                <form id="movieSearch" class="block">
-                  <input type="text" name="findMovie" id="movieInput" placeholder="Type a movie push enter!">
-                </form>
-              </div>
-
-              <div id="movieSuggestionsView">
-
-                <div id="titlePoster">
-                  <h4></h4>
-                  <img>
-              </div>
-      
-              <div id="movieInfo">
-                  <h5>Synposis</h5>
-                  <p></p>
-              </div>
-
-              </div>
-
-            </section>
-          </article>
-
-          <!--Drinks slides container-->
-          <div class="drinksContainer">
-            <div class="mySlides fade">
-              <div class="numbertext">5 / 5</div>
-              <img src="assets/movie_image.jpg" style="width:75%">
-            </div>
-          </div>
-
-          <br>
-          <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-
-        </div>
-        </article>
-
-        <!--Section for receipe and picture of drinks-->
-        
-      </div>
-    </div>
-    <div class="tile is-vertical is-6 ">
-      <div class="tile customblock">
-        <div class="tile is-parent is-vertical custom">
-          <article class="tile is-child box has-background-warning ">
-            <p class="title">Enjoy your day</p>
-            <p class="subtitle">With the selection of our drinks</p>
-            <p class="subtitle">Bar</p>
-            <form>
-              <label> Select Ingrediens </label>
-              <select class="selectDrink">
-                <option value="GIN"> Gin </option>
-                <option value="VODKA">Vodka</option>
-                <option value="Tequila">Tequila</option>
-                <option value="Cognac"> Soda</option>
-                <option value="Rum"> Rum</option>
-                <option value="Dark Rum"> Durk Rum</option>
-              </select>
-              <button class=" search btn btn-primary" id="drinkSearch" type="submit">Search</button>
+        <div>
+          <div class="has-background-warning column">
+            <form id="movieSearch" class="block">
+              <input
+                type="text"
+                name="findMovie"
+                id="movieInput"
+                placeholder="Type a movie push enter!"
+                class="input"
+              />
             </form>
-            <!--Drinks slides container-->
-          <div class="drinksContainer">
-            <div>
-              
-              <p>Section for receipe and picture of drinks</p>
-
-              <div class="ingrMes"></div>
-              <div class="recipe">
-                <div class="ingr"></div>
-                <div class="measure"></div>
-              </div>
-              <div class="result"></div>
-      
-            </div>
-          </article>
-
-          <div class="drinksContainer">
-            <div class="mySlides fade">
-              <div class="numbertext">5 / 5</div>
-              <img src="assets/movie_image.jpg" style="width:75%">
-            </div>
+            <div
+              id="movieSuggestionsView"
+              style="width: 100%; height: 500px; overflow: scroll; padding: 5px"
+            ></div>
           </div>
-
-          <br>
-          <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-
         </div>
+      </section>
+
+      <section
+        class="drinkSelect box has-background-warning column is-two-fifths is-variable m-auto"
+        style="height: 750px;"
+      >
+        <div>
+          <h2 class="is-size-3 has-text-centered box has-background-black has-text-warning-light">Enjoy your day</h2>
+        <p class="subtitle">With the selection of our drinks</p>
+        </div>
+
+        <div>
+          <form>
+            <label> Select Ingrediens </label>
+            <div class="select">
+            <select class="selectDrink">
+              <option value="GIN">Gin</option>
+              <option value="VODKA">Vodka</option>
+              <option value="Tequila">Tequila</option>
+              <option value="Cognac">Soda</option>
+              <option value="Rum">Rum</option>
+              <option value="Dark Rum">Durk Rum</option>
+            </select>
+          </div>
+            <button class="search btn button is-black" id="drinkSearch" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+
+        <br>
+
+        <div class="has-background-warning drinksContainer">
+          <p>Section for receipe and picture of drinks</p>
+          <div class="ingrMes"></div>
+            <div class="recipe">
+            <div class="ingr"></div>
+            <div class="measure"></div>
+            <div class="result"></div>
       </div>
-      </article>
-
-
-      
     </div>
-  </div>
-  </div>
-
-  <!--Footer-->
-  <footer class="footer" id="footer_Container">
-    <div class="content has-text-centered">
-      <p>
-        Send us a message
-      </p>
+    <div id="placeholderImg">
+      <img src="./assets/drink.png" alt="picuture of drinks" style="width:95%;">
     </div>
-  </footer>
-  
-</body>
+    </section>
+    </div>
 
+    <footer class="footer has-background-black has-text-warning-light" id="footer_Container">
+      <div class="content has-text-centered">
+        <p>
+          Send us a message!
+        </p>
+      </div>
+    </footer>
 
-
-<script src="./script.js"></script>
-
+    <script src="./script.js"></script>
+  </body>
 </html>

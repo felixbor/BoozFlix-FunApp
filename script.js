@@ -5,6 +5,7 @@ $(".search").on("click", function (event) {
   event.preventDefault();
   var ingredient = $(".selectDrink").val();
   console.log(ingredient);
+  $("#placeholderImg").hide();
   $(".result").empty();
   $(".ingrMes").empty();
   $(".ingr").empty();
