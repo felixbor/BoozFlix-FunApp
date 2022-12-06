@@ -170,3 +170,9 @@ header {
   width: 45px;
   height: auto;
 }
+#placeholderImg {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
