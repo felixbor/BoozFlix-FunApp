@@ -1,31 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} 
+
 body {
   background-color:black
 }
 
-
-
 header {
 text-align: center;
-color: white
-
+color: white;
 }
 
 /*Menu */
-
 #menu__toggle:checked + .menu__btn > span {
   transform: rotate(45deg);
 }
+
 #menu__toggle:checked + .menu__btn > span::before {
   top: 0;
   transform: rotate(0deg);
 }
+
 #menu__toggle:checked + .menu__btn > span::after {
   top: 0;
   transform: rotate(90deg);
 }
+
 #menu__toggle:checked ~ .menu__box {
   left: 0 !important;
 }
+
 .menu__btn {
   position: fixed;
   top: 20px;
@@ -35,6 +41,7 @@ color: white
   cursor: pointer;
   z-index: 1;
 }
+
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -45,18 +52,20 @@ color: white
   background-color: #616161;
   transition-duration: .25s;
 }
+
 .menu__btn > span::before {
   content: '';
   top: -10px;
 }
+
 .menu__btn > span::after {
   content: '';
   top: 10px;
 }
+
 .menu__box {
   display: block;
   position: fixed;
-  top: 0.75;
   right: 0;
   left: -100%;
   width: 200px;
@@ -65,8 +74,8 @@ color: white
   padding: 80px 0;
   list-style: none;
   background-color: black;
-  transition-duration: .25s;
 }
+
 .menu__item {
   display: block;
   padding: 5px 20px;
@@ -77,85 +86,60 @@ color: white
   text-decoration: none;
   transition-duration: .40s;
 }
+
 .menu__item:hover {
   background-color: #CFD8DC;
 }
+
 
 .drinksContainer {
 max-width: 500px;
 position: relative;
 margin: auto;
 }
-
-
-
-/* Number text (1/3 etc) */
-.numbertext {
-color: #f2f2f2;
-font-size: 12px;
-padding: 8px 12px;
-position: absolute;
-top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-height: 15px;
-width: 15px;
-margin: 0 2px;
-background-color: #bbb;
-border-radius: 50%;
-display: inline-block;
-transition: background-color 0.6s ease;
-}
-
-.active {
-background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-animation-name: fade;
-animation-duration: 1.5s;
-}
+ 
 
 .custom{
 margin-left: 50px;
 }
-@keyframes fade {
-from {opacity: .4} 
-to {opacity: 1}
-}
+
+
 .customblock {
 display: flex;
 flex-direction: column;
 }
- .result {
+
+
+.result {
   display: flex;
   flex-direction: column;
  }
- .result button {
+
+
+.result button {
   font-size: 1.25em;
   background-color: bisque;
  }
  
  
- .result p{
+.result p{
   font-size: 1.25em;
  }
- .ingrMes{
-  display: flex;
-  flex-direction: row;
- }
- .ingrMes img{
- 
-  max-width: 20%;
-  height: auto;}
- .recipe{
+
+
+.ingrMes{
   display: flex;
   flex-direction: row;
  }
 
- #movieSuggestionsView img {
-  max-width: 50%;
+
+ .ingrMes img{
+  max-width: 20%;
+  height: auto;
 }
+
+
+ .recipe{
+  display: flex;
+  flex-direction: row;
+ }
