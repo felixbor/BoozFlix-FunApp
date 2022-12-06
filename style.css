@@ -144,6 +144,14 @@ flex-direction: column;
   box-shadow: 0 0 30px rgb(240, 242, 244);
   background-color: rgb(9, 10, 10);
   color: #f2f2f2;
+
+ }
+ #email  form{
+  margin-bottom: 5px;
+ }
+ .getRecipe {
+  background-color: black;
+  color: #f2f2f2;
  }
  .hide {
   display:none
