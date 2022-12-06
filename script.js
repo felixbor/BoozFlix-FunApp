@@ -1,5 +1,5 @@
 //Drinks section
-var Dname =""
+var Dname = "";
 var ingredient = "";
 $(".search").on("click", function (event) {
   event.preventDefault();
@@ -43,8 +43,7 @@ function selectDrink(event) {
   $(".ingrMes").empty();
   $(".ingr").empty();
   $(".measure").empty();
-  $("#email").addClass ("Display")
-
+  $("#email").addClass("Display");
 }
 
 function fetchRecipe(name) {
@@ -79,33 +78,32 @@ function displayRecipe(data) {
   }
 
   $(".ingrMes").append(`<p>${recipe}</p>` + `<img src=${DrinkImage}>`);
-  
-  console.log($(".ingrMes").text())
-  saveLocalstorage()
 
+  console.log($(".ingrMes").text());
+  saveLocalstorage();
 }
-
 
 function saveLocalstorage() {
-    var Drinkrecipe =$(".ingrMes").text() + $(".measure").text() + $(".ingr").text()
-   
-    var object={
-        Drikname: Dname,
-        instruction: Drinkrecipe,
-    }
-    localStorage.setItem("SaveDrink",JSON.stringify(object) );
-  };
+  var Drinkrecipe =
+    $(".ingrMes").text() + $(".measure").text() + $(".ingr").text();
 
-  
-  getLocalstorage()
+  var object = {
+    Drikname: Dname,
+    instruction: Drinkrecipe,
+  };
+  localStorage.setItem("SaveDrink", JSON.stringify(object));
+}
+
+getLocalstorage();
 function getLocalstorage() {
   $(".getRecipe").on("click", function (event) {
-    event.preventDefault()
- console.log("works")
- var LocalDAta =localStorage.getItem("SaveDrink");
- console.log(LocalDAta)
+    event.preventDefault();
+    console.log("works");
+    var LocalDAta = localStorage.getItem("SaveDrink");
+    console.log(LocalDAta);
   });
 }
+
 //Movies Section
 
 var movieAPITest =
@@ -157,24 +155,3 @@ movieSearch.addEventListener("submit", (event) => {
     getSuggestions(searchMovieParam + searchMovie);
   }
 });
-
-// Image slide show
-// let slideIndex = 0;
-// showSlides();
-
-// function showSlides() {
-//   let i;
-//   let slides = document.getElementsByClassName("mySlides");
-//   let dots = document.getElementsByClassName("dot");
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   slideIndex++;
-//   if (slideIndex > slides.length) {slideIndex = 1}
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-//   setTimeout(showSlides, 2000); // Change image every 2 seconds
-// }
