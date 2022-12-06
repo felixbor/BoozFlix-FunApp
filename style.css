@@ -119,8 +119,28 @@ flex-direction: column;
 .result button {
   font-size: 1.25em;
   background-color: bisque;
+  margin-bottom: 3px;
+  border-radius: 5px;
  }
- 
+ .result button:hover {
+  box-shadow: 0 0 30px rgb(240, 242, 244);
+  background-color: rgb(9, 10, 10);
+  color: #f2f2f2;
+
+ }
+ #email  form{
+  margin-bottom: 5px;
+ }
+ .getRecipe {
+  background-color: black;
+  color: #f2f2f2;
+ }
+ .hide {
+  display:none
+}
+.Display {
+  display: inline;
+} 
  
 .result p{
   font-size: 1.25em;
@@ -135,6 +155,11 @@ flex-direction: column;
 
  .ingrMes img{
   max-width: 20%;
+  height: auto;}
+  #placeholderImg {
+    display: flex;
+    justify-content: center;
+  }
   height: auto;
 }
 

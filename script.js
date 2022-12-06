@@ -1,5 +1,5 @@
 //Drinks section
-
+var Dname =""
 var ingredient = "";
 $(".search").on("click", function (event) {
   event.preventDefault();
@@ -38,11 +38,13 @@ function displayDrinks(data) {
 }
 $(".result").on("click", selectDrink);
 function selectDrink(event) {
-  var name = event.target.textContent;
-  fetchRecipe(name);
+  Dname = event.target.textContent;
+  fetchRecipe(Dname);
   $(".ingrMes").empty();
   $(".ingr").empty();
   $(".measure").empty();
+  $("#email").addClass ("Display")
+
 }
 
 function fetchRecipe(name) {
@@ -76,12 +78,34 @@ function displayRecipe(data) {
     }
   }
 
-  console.log(DrinkImage);
-  var picture =
-    "https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg";
   $(".ingrMes").append(`<p>${recipe}</p>` + `<img src=${DrinkImage}>`);
+  
+  console.log($(".ingrMes").text())
+  saveLocalstorage()
+
 }
 
+
+function saveLocalstorage() {
+    var Drinkrecipe =$(".ingrMes").text() + $(".measure").text() + $(".ingr").text()
+   
+    var object={
+        Drikname: Dname,
+        instruction: Drinkrecipe,
+    }
+    localStorage.setItem("SaveDrink",JSON.stringify(object) );
+  };
+
+  
+  getLocalstorage()
+function getLocalstorage() {
+  $(".getRecipe").on("click", function (event) {
+    event.preventDefault()
+ console.log("works")
+ var LocalDAta =localStorage.getItem("SaveDrink");
+ console.log(LocalDAta)
+  });
+}
 //Movies Section
 
 var movieAPITest =
