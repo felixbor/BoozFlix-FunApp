@@ -41,3 +41,4 @@ The project is a collaborative work among: 1.https://github.com/felixbor 2.https
 # License
 
 This project is covered under the MIT license.
+![screenshot](./assets/screenshot.JPG)
