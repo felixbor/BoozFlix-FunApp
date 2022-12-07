@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(33, 19, 189);
 }
 
 header {
@@ -22,25 +22,8 @@ a {
 
 
 /*Menu */
-#menu__toggle:checked + .menu__btn > span {
-  transform: rotate(45deg);
-}
-
-#menu__toggle:checked + .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0deg);
-}
-
-#menu__toggle:checked + .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-}
-
-#menu__toggle:checked ~ .menu__box {
-  left: 0 !important;
-}
-
-.menu__btn {
+  
+ .menu__btn {
   position: fixed;
   top: 20px;
   left: 20px;
@@ -132,9 +115,26 @@ a {
   color: #f2f2f2;
 }
 
-#email form {
-  margin-bottom: 5px;
+
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
 }
+
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+} 
+
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+
+
 
 .getRecipe {
   background-color: black;
@@ -182,5 +182,7 @@ a {
   align-items: center;
 }
 
-
+.footer {
+  margin-top: 200px;
+}
 
