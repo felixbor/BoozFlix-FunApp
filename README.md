@@ -5,7 +5,7 @@
 This interactive Front_End Application was created as the Project 1 at the conclusion of fundamental concept phase of the Coding Boot Camp. It includes front-end technologies and Third-party APIs.
 The project is a collaborative work among a group of developers which solves a real-world problem.
 
-This application provides a user with the opportunity to choose and prepare the drinks with the ingredient they choose at home.The user selects the ingredient from the dropdown menu and is presented with the list of drinks with receipes and images.
+This application provides a user with the opportunity to choose and prepare the drinks with the ingredient they choose at home.The user selects the ingredient from the dropdown menu and is presented with the list of drinks, then choosing particular drink user is presented with a receipe and image of the chosen drink
 
 BoozFlix is also a movie reccomendation engine which can help to answer to the question "What movie should I watch?".
 The movie selction can be made based on the keyword the user inputs. The user types in the keyword and is presented with the list of movies.
@@ -19,7 +19,7 @@ https://bulma.io/documentation/
 
 Application is interactive (accepts and responds to user input).
 
-## Intallation
+## Installation
 
 No installation is required for this app.
 
