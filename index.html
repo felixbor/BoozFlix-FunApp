@@ -1,91 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <title>Project one BoozFlix</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+  </style>
+  <title>Project one BoozFlix</title>
+</head>
+
 </html>
-  <body class="has-background-black">
 
-    <div class="hamburger-menu">
-      <input id="menu__toggle" type="checkbox" />
-      <label class="menu__btn" for="menu__toggle">
-        <span></span>
-      </label>
-  
-      <ul class="menu__box">
-        <li><a class="menu__item" href= "index2.html">About</a></li>
-        <li><a class="menu__item" href="#movieSearch">Movies</a></li>
-        <li><a class="menu__item" href="#drinkSearch">Drinks</a></li>
-        <li><a class="menu__item" href="#footer_Container">Contact</a></li>
-      </ul>
-    </div>
-    
-    <header
-      class="column is-full block has-text-warning-light has-text-centered">
-      <h1 class="is-size-1"> 
-        <img src="./assets/Logo.png" id="logo" alt="film reel and cocktail glass"> BoozFlix</h1>
-      <h3 class="is-size-3">Get a drink, watch a flick!</h3>
-      
-      <p>Ever wonder what kind of boozy goodies you stock your home bar with? Well of course it depends on what kind of drinks you like to make, homeboy! For our friends and fans down to clown with simple drink recipes, you probably want to stock up on your favorite liquor and mixers like club soda or fruit juice. BoozFlix has fun and fire  drink recipes by ingredient that anyone can follow. BoozFliz movie recommendation engine is the answer to the question “What movie should I watch?”! Your film choices are about to be simplified greatly.</p>
-    </header>
+<body class="has-background-black">
 
-    <div class="columns">
-      <section
-        class="movieSelection box has-background-warning column is-two-fifths is-variable m-auto"
-      >
-        <div>
-          <h3
-            class="is-size-3 has-text-centered box has-background-black has-text-warning-light"
-          >
-            Movie
-          </h3>
-          <p>
-            Search for your favourite movie and we'll find you something similar!
-          </p>
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="index2.html">About</a></li>
+      <li><a class="menu__item" href="#movieSearch">Movies</a></li>
+      <li><a class="menu__item" href="#drinkSearch">Drinks</a></li>
+      <li><a class="menu__item" href="#footer_Container">Contact</a></li>
+    </ul>
+  </div>
+
+  <header class="column is-full block has-text-warning-light has-text-centered">
+    <h1 class="is-size-1">
+      <img src="./assets/Logo.png" id="logo" alt="film reel and cocktail glass"> BoozFlix
+    </h1>
+    <h3 class="is-size-3">Get a drink, watch a flick!</h3>
+
+    <p>Ever wonder what kind of boozy goodies you stock your home bar with? Well of course it depends on what kind of
+      drinks you like to make, homeboy! For our friends and fans down to clown with simple drink recipes, you probably
+      want to stock up on your favorite liquor and mixers like club soda or fruit juice. BoozFlix has fun and fire drink
+      recipes by ingredient that anyone can follow. BoozFliz movie recommendation engine is the answer to the question
+      “What movie should I watch?”! Your film choices are about to be simplified greatly.</p>
+  </header>
+
+  <div class="columns">
+    <section class="movieSelection box has-background-warning column is-two-fifths is-variable m-auto">
+      <div>
+        <h3 class="is-size-3 has-text-centered box has-background-black has-text-warning-light">
+          Movie
+        </h3>
+        <p>
+          Search for your favourite movie and we'll find you something similar!
+        </p>
+      </div>
+
+      <div>
+        <div class="has-background-warning column">
+          <form id="movieSearch" class="block">
+            <input type="text" name="findMovie" id="movieInput" placeholder="Type a movie push enter!" class="input" />
+          </form>
+          <div id="movieSuggestionsView" style="width: 100%; height: 670px; overflow: scroll; padding: 5px"></div>
         </div>
+      </div>
+    </section>
 
-        <div>
-          <div class="has-background-warning column">
-            <form id="movieSearch" class="block">
-              <input
-                type="text"
-                name="findMovie"
-                id="movieInput"
-                placeholder="Type a movie push enter!"
-                class="input"
-              />
-            </form>
-            <div
-              id="movieSuggestionsView"
-              style="width: 100%; height: 670px; overflow: scroll; padding: 5px"
-            ></div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="drinkSelect box has-background-warning column is-two-fifths is-variable m-auto"
-        style="height: 920px;"
-      >
-        <div>
-          <h2 class="is-size-3 has-text-centered box has-background-black has-text-warning-light">Enjoy your day</h2>
+    <section class="drinkSelect box has-background-warning column is-two-fifths is-variable m-auto"
+      style="height: 920px;">
+      <div>
+        <h2 class="is-size-3 has-text-centered box has-background-black has-text-warning-light">Enjoy your day</h2>
         <p class="subtitle">With the selection of our drinks</p>
-        </div>
+      </div>
 
-        <div>
-          <form>
-            <label> Select Ingrediens </label>
-            <div class="select">
+      <div>
+        <form>
+          <label id="label"> Select Ingrediens </label>
+          <div class="select">
             <select class="selectDrink">
+              <option value=""></option>
               <option value="GIN">Gin</option>
               <option value="VODKA">Vodka</option>
               <option value="Tequila">Tequila</option>
@@ -98,48 +91,49 @@
               <option value="Brandy">Brandy</option>
             </select>
           </div>
-            <button class="search btn button is-black" id="drinkSearch" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-
-        <br>
-
-        <div class="has-background-warning drinksContainer">
-          
-          <div class="ingrMes"></div>
-            <div class="recipe">
-            <div class="ingr"></div>
-            <div class="measure"></div>
-            
-      </div>
-      <div id="email" class="hide">
-        <form>
-          <input type="text" placeholder="enter your email">
-          <button type="submit" class=" getRecipe">Get recipe on your email </button>
-
+          <button class="search btn button is-black" id="drinkSearch" type="submit">
+            Search
+          </button>
         </form>
-
       </div>
-      <div class="result"></div>
-    </div>
-    <div id="placeholderImg">
-      <img src="./assets/drink.png" alt="picuture of drinks" style="width:70%;">
-    </div>
+
+      <br>
+
+      <div class="has-background-warning drinksContainer">
+
+        <div class="ingrMes"></div>
+        <div class="recipe">
+          <div class="ingr"></div>
+          <div class="measure"></div>
+
+        </div>
+        <div id="email" class="hide">
+          <form>
+            <input type="text" placeholder="enter your email">
+            <button type="submit" class=" getRecipe">Get recipe on your email </button>
+
+          </form>
+
+        </div>
+        <div class="result"></div>
+      </div>
+      <div id="placeholderImg">
+        <img src="./assets/drink.png" alt="picuture of drinks" style="width:70%;">
+      </div>
     </section>
+  </div>
+
+
+
+  <footer class="footer has-background-black has-text-warning-light content has-text-centered" id="footer_Container">
+    <img src="./assets/Logo.png" id="logo" alt="film reel and cocktail glass">
+    <div class=>
+      <a href="https://github.com/felixbor/team-one-project-1"> Contact Us </a>
+
     </div>
+  </footer>
 
- 
+  <script src="./script.js"></script>
+</body>
 
-    <footer class="footer has-background-black has-text-warning-light content has-text-centered" id="footer_Container">
-      <img src="./assets/Logo.png" id="logo" alt="film reel and cocktail glass"> 
-      <div class=>
-        <a href="https://github.com/felixbor/team-one-project-1"> Contact Us </a>
-       
-      </div>
-    </footer>
-
-    <script src="./script.js"></script>
-  </body>
 </html>

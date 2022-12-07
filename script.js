@@ -4,6 +4,7 @@ var ingredient = "";
 $(".search").on("click", function (event) {
   event.preventDefault();
   var ingredient = $(".selectDrink").val();
+  if(ingredient!=""){
   console.log(ingredient);
   $("#placeholderImg").hide();
   $(".result").empty();
@@ -12,7 +13,7 @@ $(".search").on("click", function (event) {
   $(".measure").empty();
   $("#email").hide()
   fetchDrink();
-
+}
   function fetchDrink() {
     console.log(ingredient);
     fetch(
