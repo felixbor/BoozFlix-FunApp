@@ -145,9 +145,6 @@ a {
   display: none;
 }
 
-.Display {
-  display: inline;
-}
 
 .result p {
   font-size: 1.25em;
@@ -187,4 +184,3 @@ a {
 
 
 
-}

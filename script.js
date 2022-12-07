@@ -10,6 +10,7 @@ $(".search").on("click", function (event) {
   $(".ingrMes").empty();
   $(".ingr").empty();
   $(".measure").empty();
+  $("#email").hide()
   fetchDrink();
 
   function fetchDrink() {
@@ -43,7 +44,7 @@ function selectDrink(event) {
   $(".ingrMes").empty();
   $(".ingr").empty();
   $(".measure").empty();
-  $("#email").addClass("Display");
+  $("#email").show();
 }
 
 function fetchRecipe(name) {
