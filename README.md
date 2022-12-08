@@ -34,8 +34,8 @@ Drinks Section:
 When the user choose the ingredient from the dropdown menu,
 Then he is presented with the list of drinks with receipes and the images.
 
-[Project_1_BoozFlix] (https://felixbor.github.io/team-one-project-1/)
-
+[Project_1_BoozFlix] (https://felixbor.github.io/BoozFlix-FunApp/)
+repo : https://github.com/felixbor/BoozFlix-FunApp
 ## Collaborators:
 
 The project is a collaborative work among: 1.https://github.com/felixbor 2.https://github.com/ejhem 3.https://github.com/ZairaBarry
